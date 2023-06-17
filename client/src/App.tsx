@@ -37,8 +37,9 @@ function App() {
 
   if (isLoading) return "Loading...";
 
-  if (error || countError)
-    return "An error has occurred: " + error + countError;
+  if (error) return "An error has occurred: " + error;
+
+  if (countError) return "A count error has occurred: " + countError;
 
   return (
     <>
@@ -64,7 +65,7 @@ function App() {
         ) : null}
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
-        </p>{" "}
+        </p>
         <p>{data} </p>
       </div>
       <p className="read-the-docs">
